@@ -16,6 +16,7 @@ import pandas as pd
 # Path is built relative to this file, so it works locally AND on Streamlit Cloud.
 _BASE = Path(__file__).parent
 _CANDIDATES = [_BASE / "data" / "dataset.csv",
+               _BASE / "dataset.csv",                      # flat repo layout
                _BASE / "data" / "player_injuries_impact.csv",
                _BASE / "player_injuries_impact.csv"]
 DATA_PATH = next((p for p in _CANDIDATES if p.exists()), _CANDIDATES[0])
